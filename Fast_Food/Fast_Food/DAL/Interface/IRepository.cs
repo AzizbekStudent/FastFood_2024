@@ -5,11 +5,11 @@
     {
         Task<IEnumerable<T>> GetAllAsync();
 
-        T GetByIdAsync(int id);
+        Task<T> GetByIdAsync(int id);
 
-        int Create (T entity);
+        Task<int> Create (T entity);
 
-        void Update(T entity);
+        Task<int> Update(T entity);
 
         void Delete(int Id);
     }

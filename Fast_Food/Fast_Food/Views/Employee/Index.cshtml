@@ -77,9 +77,9 @@
                 @Html.DisplayFor(modelItem => item.FullTime)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Employee_ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Employee_ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Employee_ID">Delete</a>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Employee_ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Employee_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Employee_ID })
             </td>
         </tr>
 }
